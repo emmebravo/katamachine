@@ -9,6 +9,7 @@ const times10 = (n) => n * 10;
 // step 2: hop into fcn body
 const memoizedClosureTimes10 = () => {
   const cache = {}; // step 3: initialize cache as empty obj
+  // the only reason for this parent fcn is to remove cache from global scope
 
   // step 4: return this fcn
   // important: when calling memoClosureTimes10, only the body of the fcn being return (below) is being called
