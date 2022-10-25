@@ -1,5 +1,7 @@
 // don't go for the greedy algo, go for brute force instead which is recursion
 
+// calculate every single combination possible and keep track of the minimum
+
 let recursionCounter = 0;
 const coins = [10, 6, 1];
 
