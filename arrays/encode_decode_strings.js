@@ -28,5 +28,20 @@ const decode = function (str) {
 
 // TC: O(N), SP: O(1)
 
-console.log(encode(['lint', 'code', 'love', 'you']));
-console.log(decode('4#lint4#code4#love3#you'));
+// using methods
+const encod = function (arr) {
+  if (!arr.length) {
+    return null;
+  }
+  return arr.join('@enconde@');
+};
+
+const decod = function (str) {
+  if (str === null) {
+    return [];
+  }
+  return str.split('@enconde@');
+};
+
+console.log(encod(['lint', 'code', 'love', 'you']));
+console.log(decod('lint@enconde@code@enconde@love@enconde@you'));
