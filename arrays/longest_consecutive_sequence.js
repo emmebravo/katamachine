@@ -1,0 +1,1 @@
+const longestConsecutive = function (nums) {};
