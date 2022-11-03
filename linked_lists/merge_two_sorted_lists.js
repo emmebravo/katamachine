@@ -1,6 +1,6 @@
 const mergeTwoLists = function (list1, list2) {
-  let dummy = new ListNode(0, null); // takes care of empty list edge case
-  let curr = dummy; // curr node is referencing dummy node; curr.next is null
+  let dummy = new ListNode(0, null), // takes care of empty list edge case
+    curr = dummy; // curr node is referencing dummy node; curr.next is null
 
   while (list1 && list2) {
     // while both lists have nodes

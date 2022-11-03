@@ -9,28 +9,30 @@ const reorderList = function (head) {
   }
 
   // second half of list, which we're gonna reverse
-  let second = slow.next, // val after midpoint
+  let second = slow.next, // val after midpoint; start of second half
     prev = null;
-  slow.next = null;
+  slow.next = null; // we want the last node in first half to point to null
 
   while (second !== null) {
-    let temp = second.next;
+    // reverse the second half of the list
+    let temp = second.next; // use a temp variable to hold val of second.next
     second.next = prev;
     prev = second;
     second = temp;
   }
 
-  // merge two halfs
-  let first = head,
-    segundo = prev;
+  // merge two halves
+  let first = head, // left half
+    newSecond = prev; // right half, prev point at right head
 
-  while (segundo !== null) {
+  while (newSecond !== null) {
+    // we have two temp variables; one from the left side && one from the right side
     let temp1 = first.next,
-      temp2 = segundo.next;
-    first.next = segundo;
-    segundo.next = temp1;
+      temp2 = newSecond.next;
+    first.next = newSecond;
+    newSecond.next = temp1;
     first = temp1;
-    segundo = temp2;
+    newSecond = temp2;
   }
 };
 
